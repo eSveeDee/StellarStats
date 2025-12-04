@@ -1,0 +1,13 @@
+# Core runtime dependencies
+numpy
+pandas
+matplotlib
+scipy
+tifffile
+scikit-image
+cellpose
+
+# Optional / development & usage tools 
+# jupyter
+# ipykernel
+# pytest
