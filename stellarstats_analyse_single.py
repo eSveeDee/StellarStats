@@ -44,13 +44,18 @@ def main():
         read_meta,
         plot_intensities,
         plot_normalized_intensities,
-        calculate_cell_sizes
     )
+    
+    from stellarstats.analyse_cell_masks import (
+        calculate_cell_sizes,
+    )
+    
     from stellarstats.analyse_intensities import (
         calculate_peak_intensity_ratios,
         plot_intensity_ratios_histogram,
-        get_ratio_mask  # Ensure this function is defined in your module
+        get_ratio_mask,
     )
+
 
     # Setup paths with separate mask directory
     image_stack_path = args.input_file
@@ -76,8 +81,8 @@ def main():
     size_df['size_um2'] = size_df['size_px'] * px_x * px_y
 
     # Generate the wavelength column based on emission details
-    start_range = int(emission_details['Emission Start (nm)']) + int(emission_details['Detection Bandwidth (nm)']) / 2
-    end_range = int(emission_details['Emission End (nm)']) + int(emission_details['Detection Bandwidth (nm)']) / 2
+    start_range = int(emission_details['Emission Start (nm)'])
+    end_range = int(emission_details['Emission End (nm)'])
     n_steps = int(emission_details['Number of Steps'])
     wavelength = np.linspace(start_range, end_range, n_steps)
 

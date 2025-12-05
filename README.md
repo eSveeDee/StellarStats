@@ -5,7 +5,7 @@ StellarStats is a Python toolkit for extracting and analysing spectral data from
 - Segment cells in lambda-scan stacks using Cellpose.
 - Extract per-cell emission spectra from lambda scans.
 - Compute and visualise peak intensity ratios.
-- Optionally derive simple shape metrics (Feret diameters, sphericity). \
+- Optionally derive simple shape metrics (Feret diameters, sphericity). 
 
 
 StellarStats is designed to work on lambda-scan TIFF stacks with matching Leica XML metadata files. \
@@ -66,9 +66,9 @@ project_dir/
   Series001.tif
   Series002.tif
   ...
-MetaData/
-  Series001_Properties.xml
-  Series002_Properties.xml
+  MetaData/
+    Series001_Properties.xml
+    Series002_Properties.xml
     ...
 ```
 

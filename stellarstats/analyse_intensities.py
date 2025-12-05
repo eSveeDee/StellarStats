@@ -86,7 +86,7 @@ def get_ratio_mask(mask, ratios_df, input_filename, output_dir="./", save_output
     for label, ratio in ratio_map.items():
         mask_copy[mask_copy == label] = ratio
 
-    original_cmap = plt.cm.magma  # Or another colormap
+    original_cmap = plt.cm.Spectral  # Or another colormap
     colors = original_cmap(np.linspace(0, 1, 256))  # Extract colors from the colormap
     colors[0] = [1, 1, 1, 1]  # Set the first color (for 0 values) to white (R, G, B, A)
     
