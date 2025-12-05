@@ -11,6 +11,8 @@ StellarStats is a Python toolkit for extracting and analysing spectral data from
 StellarStats is designed to work on lambda-scan TIFF stacks with matching Leica XML metadata files. \
 Additional notebooks are provided for more extensive analysis.
 
+![EM grid with fluorescent cells - banner](StellarStats_header-git.jpg)
+
 ---
 
 ## **Installation**
