@@ -217,3 +217,8 @@ The batch scripts assume a naming convention consistent between TIFF stacks, Lei
 If your acquisition uses different naming conventions, you may need to adapt the mapping logic in the analysis scripts where TIFF and XML filenames are constructed from the mask filenames.
 
 Segmentation is currently 2D (MIP-based); 3D segmentation for lambda stacks is currently not implemented.
+
+## License
+
+StellarStats is licensed under the Creative Commons Attribution 4.0
+International License (CC BY 4.0). See the `LICENSE` file for details.

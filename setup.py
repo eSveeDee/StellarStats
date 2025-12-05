@@ -24,9 +24,9 @@ setup(
     long_description_content_type='text/markdown',
     url='https://github.com/eSveeDee/stellarstats',  # update once repo exists
     classifiers=[
-        'Programming Language :: Python :: 3',
-        'License :: OSI Approved :: MIT License',
-        'Operating System :: OS Independent',
-    ],
+    "Programming Language :: Python :: 3",
+    "License :: Other/Proprietary License",
+    "Operating System :: OS Independent",
+],
     python_requires='>=3.6',
 )
