@@ -35,6 +35,26 @@ pip install -e .
 pip install -r requirements.txt
 ```
 
+## **Workflow overview**
+
+1. Segment cells on 2D MIPs using Cellpose:
+
+   - Test parameters on a single TIFF stack.
+   - Run batch segmentation for all TIFFs in a folder.
+
+2. Analyse spectra:
+
+   - Extract per-cell spectra and plot (absolute or normalised).
+   - Compute peak intensity ratios between two wavelength ranges.
+   - Visualise ratios as histograms or as values mapped back onto the masks.
+
+3. (Optional) Shape metrics:
+
+   - Compute per-cell area and simple shape descriptors (Feret diameters, sphericity).
+   - Visualise sphericity mapped onto masks.
+
+4. Use generated csv outputs for further comparitive analyses (see notebooks for examples).
+
 ## **Expected data structure**
 
 StellarStats assumes a per-project directory with:
@@ -62,27 +82,6 @@ During segmentation and analysis, the following subdirectories are created:
 
 
 The batch analysis scripts operate on this structure and assume this nomenclature.
-
-## **Workflow overview**
-
-1. Segment cells on 2D MIPs using Cellpose:
-
-   - Test parameters on a single TIFF stack.
-   - Run batch segmentation for all TIFFs in a folder.
-
-2. Analyse spectra:
-
-   - Extract per-cell spectra and plot (absolute or normalised).
-   - Compute peak intensity ratios between two wavelength ranges.
-   - Visualise ratios as histograms or as values mapped back onto the masks.
-
-3. (Optional) Shape metrics:
-
-   - Compute per-cell area and simple shape descriptors (Feret diameters, sphericity).
-   - Visualise sphericity mapped onto masks.
-
-4. Use generated csv outputs for further comparitive analyses (see notebooks for examples).
-
 
 ## **Usage**
 
@@ -188,9 +187,6 @@ To analyse all scans in a standard project directory, run:
 ```python
 python run/stellarstats_analyse_batch.py \
     -p /path/to/project_dir \
-    --plot_normalized_intensity \
-    --ratio_histogram \
-    --bins 50 \
     --save_output
 ```
 
