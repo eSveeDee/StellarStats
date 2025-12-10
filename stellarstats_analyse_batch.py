@@ -34,6 +34,8 @@ def main():
     parser.add_argument('--save_output', action='store_true', help="Save output dataframes and figures.")
     args = parser.parse_args()
 
+    sys.path.insert(0, '/scicore/home/engel0006/vandor0000/script_library/CLEM/stellarstats/')
+
     from stellarstats.extract_spectra import (
         load_mask,
         calculate_intensity,
@@ -112,8 +114,15 @@ def main():
         # Save cell sizes
         if args.save_output:
             size_csv_path = os.path.join(input_dir, "combined_cell_sizes.csv")
-            size_df.to_csv(size_csv_path, index=False)
-            print(f"Saved cell sizes to {size_csv_path}")
+            write_header = not os.path.exists(size_csv_path)
+            size_df.to_csv(
+                size_csv_path,
+                mode="a",          # append instead of overwrite
+                header=write_header,
+                index=False
+            )
+            print(f"Appended cell sizes to {size_csv_path}")
+
 
         if args.sphericity_mask:
             plot_sphericity_mask(
