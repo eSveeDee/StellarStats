@@ -12,7 +12,7 @@ setup(
         'matplotlib',    # plotting
         'tifffile',      # reading/writing TIFF image stacks
         'scikit-image',  # skimage.* utilities in mask analysis
-        'cellpose',      # cell segmentation
+        'cellpose==3.1.1.2',      # cell segmentation
     ],
     author='Sofie van Dorst',
     author_email='sofie.vandorst@unibas.ch',
